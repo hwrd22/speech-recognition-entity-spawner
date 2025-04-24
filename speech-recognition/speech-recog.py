@@ -57,10 +57,14 @@ def getResponse(response:str):
     allocateToArrays("spawn wolves", "Spawning angry wolves to steal your bones.", "dog", mcCmds, ttsVoiceClips, contains)
   elif "wolf" in response:  # Elif to avoid sending two TTS messages
     allocateToArrays("spawn wolves", "Spawning angry wolves to steal your bones.", "wolf", mcCmds, ttsVoiceClips, contains)
+  
+  # Polar Bear
+  if "bear" in response:
+    allocateToArrays("spawn bears", "Spawning angry polar bears because you insulted their baby.", "bear", mcCmds, ttsVoiceClips, contains)
 
   # Iron Golem
   if "iron" in response:
-    allocateToArrays("spawn iron golem", "Spawning an angry Iron Golem yeet you in the air.", "iron", mcCmds, ttsVoiceClips, contains)
+    allocateToArrays("spawn golem", "Spawning an angry Iron Golem to yeet you in the air.", "iron", mcCmds, ttsVoiceClips, contains)
 
   # Zombie
   if "zombie" in response:
@@ -74,66 +78,133 @@ def getResponse(response:str):
   elif "bone" in response:
     allocateToArrays("spawn skeletons", "Spawning skeletons, welcome to the bone zone.", "bone", mcCmds, ttsVoiceClips, contains)
 
-  if "awman" in response or "creeper" in response:
-    mcCmds.append("Spawning Creepers to blow up your house.")
-    if "awman" in response:
-      contains.append("aw man")
-    else:
-      contains.append("creeper")
+  # Creeper
+  if "creeper" in response:
+    allocateToArrays("spawn creepers", "Spawning Creepers to blow up your house.", "creeper", mcCmds, ttsVoiceClips, contains)
+  elif "cat" in response:  # Cat being associated with Creepers in some way, not rigged at all
+    allocateToArrays("spawn creepers", "Spawning Creepers to blow up your house.", "cat", mcCmds, ttsVoiceClips, contains)
+
+  # Spider
   if "spider" in response:
-    mcCmds.append("Spawning spiders to climb your walls.")
-    contains.append("spider")
-  if "slime" in response:
-    mcCmds.append("Spawning slimes to bounce on your head.")
-    contains.append("slime")
+    allocateToArrays("spawn spiders", "Spawning spiders to climb your walls.", "spider", mcCmds, ttsVoiceClips, contains)
+  elif "bug" in response:  # Generally the most common "bug" encountered in the game
+    allocateToArrays("spawn spiders", "Spawning spiders to climb your walls.", "bug", mcCmds, ttsVoiceClips, contains)
+
+  # Witch
   if "witch" in response:
-    mcCmds.append("Spawning witches to cackle at you.")
-    contains.append("witch")
-  if "dark" in response or "warden" in response:
-    mcCmds.append("Spawning Warden because you were too noisy.")
-    if "dark" in response:
-      contains.append("dark")
-    else:
-      contains.append("warden")
-  if "silverfish" in response or "fish" in response or "silver" in response:
-    mcCmds.append("Spawning silverfish to eat your stones.")
-    if "silverfish" in response:
-      contains.append("silverfish")
-    elif "fish" in response:
-      contains.append("fish")
-    else:
-      contains.append("silver")
-  if "bed" in response or "sleep" in response or "phantom" in response:
-    mcCmds.append("Spawning phantoms because you need some sleep.")
-    if "bed" in response:
-      contains.append("bed")
-    elif "sleep" in response:
-      contains.append("sleep")
-    else:
-      contains.append("phantom")
-  if "illager" in response:
-    mcCmds.append("Spawning Illagers to steal your emeralds.")
-    contains.append("illager")
-  if "ravager" in response:
-    mcCmds.append("Spawning Ravagers to terrorize the village.")
-    contains.append("ravager")
-  if "pig" in response:
-    mcCmds.append("Spawning angry Pigmen to steal your gold.")
-    contains.append("pig")
+    allocateToArrays("spawn witches", "Spawning witches to cackle at you.", "witch", mcCmds, ttsVoiceClips, contains)
+
+  # Silverfish
+  if "silverfish" in response:
+    allocateToArrays("spawn silverfishes", "Spawning silverfish to eat your stones.", "silverfish", mcCmds, ttsVoiceClips, contains)
+  elif "silver" in response:
+    allocateToArrays("spawn silverfishes", "Spawning silverfish to eat your stones.", "silver", mcCmds, ttsVoiceClips, contains)
+  elif "fish" in response:
+    allocateToArrays("spawn silverfishes", "Spawning silverfish to eat your stones.", "fish", mcCmds, ttsVoiceClips, contains)
+
+  # Phantom
+  if "bed" in response:
+    allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "bed", mcCmds, ttsVoiceClips, contains)
+  elif "sleep" in response:
+    allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "sleep", mcCmds, ttsVoiceClips, contains)
+  elif "phantom" in response:
+    allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "phantom", mcCmds, ttsVoiceClips, contains)
+
+  # Enderman
   if "end" in response:
-    mcCmds.append("Spawning angry Endermen to steal your blocks.")
-    contains.append("end")
+    allocateToArrays("spawn endermans", "Spawning angry Endermen to steal your blocks.", "end", mcCmds, ttsVoiceClips, contains)
+  
+  # Illager (Will be Pillager in Minecraft)
+  if "illager" in response:
+    allocateToArrays("spawn pillagers", "Spawning Illagers to steal your emeralds.", "illager", mcCmds, ttsVoiceClips, contains)
+  
+  # Ravager
+  if "ravager" in response:
+    allocateToArrays("spawn ravager", "Spawning a Ravager to terrorize the village.", "ravager", mcCmds, ttsVoiceClips, contains)
+
+  # Slime
+  if "slime" in response:
+    allocateToArrays("spawn slimes", "Spawning slimes to bounce on your head.", "slime", mcCmds, ttsVoiceClips, contains)
+  
+  # Breeze
+  if "breeze" in response:
+    allocateToArrays("spawn breezes", "Spawning Breezes to blow you away.", "breeze", mcCmds, ttsVoiceClips, contains)
+  elif "wind" in response:
+    allocateToArrays("spawn breezes", "Spawning Breezes to blow you away.", "wind", mcCmds, ttsVoiceClips, contains)
+  
+  # Guardian
+  if "guard" in response:
+    allocateToArrays("spawn guardians", "Spawning Guardians to go pew pew at you.", "guard", mcCmds, ttsVoiceClips, contains)
+
+  # Blaze
+  if "blaze" in response:
+    allocateToArrays("spawn blazes", "Spawning Blazes to set you on fire.", "blaze", mcCmds, ttsVoiceClips, contains)
+  elif "fire" in response:
+    allocateToArrays("spawn blazes", "Spawning Blazes to set you on fire.", "fire", mcCmds, ttsVoiceClips, contains)
+
+  # Piglin
+  if "pig" in response:
+    allocateToArrays("spawn piglins", "Spawning angry Piglins to steal your gold.", "pig", mcCmds, ttsVoiceClips, contains)
+
+  # Piglin Brute
+  if "brute" in response:
+    allocateToArrays("spawn brute", "Spawning a Piglin Brute to steal your gold with gold.", "brute", mcCmds, ttsVoiceClips, contains)
+  
+  # Ghast
+  if "ghast" in response:
+    allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "ghast", mcCmds, ttsVoiceClips, contains)
+  elif "ghost" in response:
+    allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "ghost", mcCmds, ttsVoiceClips, contains)
+  elif "soul" in response:
+    allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "soul", mcCmds, ttsVoiceClips, contains)
+
+  # Wither Skeleton
   if "skull" in response:
-    mcCmds.append("Spawning Wither Skeletons to not drop Wither Skulls.")
-    contains.append("skull")
+    allocateToArrays("spawn witherskeletons", "Spawning Wither Skeletons to not drop Wither Skulls.", "skull", mcCmds, ttsVoiceClips, contains)
+  
+  # Hoglin
+  if "hog" in response:
+    allocateToArrays("spawn hoglins", "Spawning Hoglins to headbutt you.", "hog", mcCmds, ttsVoiceClips, contains)
+  
+  # Magma Cube
+  if "magma" in response:
+    allocateToArrays("spawn magmacubes", "Spawning Magma Cubes to bounce with fire.", "magma", mcCmds, ttsVoiceClips, contains)
+  elif "lava" in response:
+    allocateToArrays("spawn magmacubes", "Spawning Magma Cubes to bounce with fire.", "lava", mcCmds, ttsVoiceClips, contains)
+
+  # Endermite
+  if "mite" in response:
+    allocateToArrays("spawn endermites", "Spawning Endermites because you forgot they existed.", "mite", mcCmds, ttsVoiceClips, contains)
+  elif "pearl" in response:  # Since they spawn from ender pearls
+    allocateToArrays("spawn endermites", "Spawning Endermites because you forgot they existed.", "pearl", mcCmds, ttsVoiceClips, contains)
+
+  # Shulker
+  if "shulker" in response:
+    allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "shulker", mcCmds, ttsVoiceClips, contains)
+  elif "chest" in response:  # Will be using all storage blocks for this mob
+    allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "chest", mcCmds, ttsVoiceClips, contains)
+  elif "box" in response:  # It IS called a Shulker Box so
+    allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "box", mcCmds, ttsVoiceClips, contains)
+  elif "barrel" in response:
+    allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "barrel", mcCmds, ttsVoiceClips, contains)
+
+  # Warden
+  if "dark" in response:
+    allocateToArrays("spawn warden", "Spawning a Warden because you were too noisy.", "dark", mcCmds, ttsVoiceClips, contains)
+  elif "warden" in response:
+    allocateToArrays("spawn warden", "Spawning a Warden because you were too noisy.", "warden", mcCmds, ttsVoiceClips, contains)
+
+  # Ender Dragon  
   if "dragon" in response:
-    mcCmds.append("Spawning Ender Dragon, good luck.")
-    contains.append("dragon")
+    allocateToArrays("spawn dragon", "Spawning an Ender Dragon, good luck speedrunning that.", "dragon", mcCmds, ttsVoiceClips, contains)
+
+  # Wither
   if "wither" in response:
-    mcCmds.append("Spawning Wither to shoot skulls at you.")
+    allocateToArrays("spawn wither", "Spawning a Wither to shoot skulls at you.", "wither", mcCmds, ttsVoiceClips, contains)
+
+  # Just TNT.
   if "tnt" in response:
-    mcCmds.append("Spawning TNT, kaboom.")
-    contains.append("tnt")
+    allocateToArrays("spawn tnt", "Spawning TNT, kaboom.", "tnt", mcCmds, ttsVoiceClips, contains)
 
   print(res, end=" (Contains " if contains else "\n")
   for word in contains:
