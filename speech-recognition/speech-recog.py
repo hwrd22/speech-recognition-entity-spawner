@@ -4,6 +4,7 @@ import argparse
 from gtts import gTTS
 import os
 import playsound
+from mc_connector import MCConnector
 
 # Microphone selector
 parser = argparse.ArgumentParser()
@@ -22,6 +23,7 @@ if args.Microphone:
   micNdx = int(input("Enter the device index for the microphone you will be using: "))
 
 mic = sr.Microphone(micNdx)
+mcInstance = MCConnector(7777)  # Attempting to connect to Minecraft with the mod. The mod will also open this port on localhost.
 print("Beginning speech recognition!")
 
 
@@ -214,7 +216,7 @@ def getResponse(response:str):
       print(word, end=", ")
   for cmd in ttsVoiceClips:
     playTTS(cmd)
-  mcCmds.append(res)
+  # mcCmds.append(res)
   return mcCmds
 
 
@@ -225,5 +227,8 @@ while True:
       audio = r.listen(src)
       resp = r.recognize_google(audio)
       cmd = getResponse(resp)
+
+      mcInstance.stream(cmd)  # Send to Minecraft
+
   except sr.UnknownValueError:
     pass
