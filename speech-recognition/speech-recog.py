@@ -216,7 +216,6 @@ def getResponse(response:str):
       print(word, end=", ")
   for cmd in ttsVoiceClips:
     playTTS(cmd)
-  # mcCmds.append(res)
   return mcCmds
 
 
