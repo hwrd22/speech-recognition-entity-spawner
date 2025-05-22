@@ -105,9 +105,9 @@ def getResponse(response:str):
     allocateToArrays("spawn silverfishes", "Spawning silverfish to eat your stones.", "fish", mcCmds, ttsVoiceClips, contains)
 
   # Phantom
-  if "bed" in response:
+  if "bed" in response:  # Relates to phantoms spawning if the player hasn't slept
     allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "bed", mcCmds, ttsVoiceClips, contains)
-  elif "sleep" in response:
+  elif "sleep" in response:  # Ditto
     allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "sleep", mcCmds, ttsVoiceClips, contains)
   elif "phantom" in response:
     allocateToArrays("spawn phantoms", "Spawning phantoms because you need some sleep.", "phantom", mcCmds, ttsVoiceClips, contains)
@@ -119,6 +119,8 @@ def getResponse(response:str):
   # Illager (Will be Pillager in Minecraft)
   if "illager" in response:
     allocateToArrays("spawn pillagers", "Spawning Illagers to steal your emeralds.", "illager", mcCmds, ttsVoiceClips, contains)
+  elif "raid" in response:  # Pillagers are associated with raids
+    allocateToArrays("spawn pillagers", "Spawning Illagers to steal your emeralds.", "raid", mcCmds, ttsVoiceClips, contains)
   
   # Ravager
   if "ravager" in response:
@@ -137,11 +139,15 @@ def getResponse(response:str):
   # Guardian
   if "guard" in response:
     allocateToArrays("spawn guardians", "Spawning Guardians to go pew pew at you.", "guard", mcCmds, ttsVoiceClips, contains)
+  elif "sea" in response:  # Guardians are found in ocean monuments
+    allocateToArrays("spawn guardians", "Spawning Guardians to go pew pew at you.", "sea", mcCmds, ttsVoiceClips, contains)
+  elif "ocean" in response:  # Ditto
+    allocateToArrays("spawn guardians", "Spawning Guardians to go pew pew at you.", "ocean", mcCmds, ttsVoiceClips, contains)
 
   # Blaze
   if "blaze" in response:
     allocateToArrays("spawn blazes", "Spawning Blazes to set you on fire.", "blaze", mcCmds, ttsVoiceClips, contains)
-  elif "fire" in response:
+  elif "fire" in response:  # Blazes fire fireballs to players
     allocateToArrays("spawn blazes", "Spawning Blazes to set you on fire.", "fire", mcCmds, ttsVoiceClips, contains)
 
   # Piglin
@@ -155,13 +161,13 @@ def getResponse(response:str):
   # Ghast
   if "ghast" in response:
     allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "ghast", mcCmds, ttsVoiceClips, contains)
-  elif "ghost" in response:
+  elif "ghost" in response:  # Ghasts are sometimes compared with ghosts/souls
     allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "ghost", mcCmds, ttsVoiceClips, contains)
-  elif "soul" in response:
+  elif "soul" in response:  # Ditto
     allocateToArrays("spawn ghasts", "Spawning Ghasts to wail at you.", "soul", mcCmds, ttsVoiceClips, contains)
 
   # Wither Skeleton
-  if "skull" in response:
+  if "skull" in response:  # Wither skeletons drop Wither Skulls, an important item in Minecraft
     allocateToArrays("spawn witherskeletons", "Spawning Wither Skeletons to not drop Wither Skulls.", "skull", mcCmds, ttsVoiceClips, contains)
   
   # Hoglin
@@ -187,11 +193,11 @@ def getResponse(response:str):
     allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "chest", mcCmds, ttsVoiceClips, contains)
   elif "box" in response:  # It IS called a Shulker Box so
     allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "box", mcCmds, ttsVoiceClips, contains)
-  elif "barrel" in response:
+  elif "barrel" in response:  # A storage container in Minecraft
     allocateToArrays("spawn shulkers", "Spawning Shulkers to lift you up into the air.", "barrel", mcCmds, ttsVoiceClips, contains)
 
   # Warden
-  if "dark" in response:
+  if "dark" in response:  # Applies the "Darkness" effect on players
     allocateToArrays("spawn warden", "Spawning a Warden because you were too noisy.", "dark", mcCmds, ttsVoiceClips, contains)
   elif "warden" in response:
     allocateToArrays("spawn warden", "Spawning a Warden because you were too noisy.", "warden", mcCmds, ttsVoiceClips, contains)
