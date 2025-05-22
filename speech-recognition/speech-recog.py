@@ -63,6 +63,8 @@ def getResponse(response:str):
   # Polar Bear
   if "bear" in response:
     allocateToArrays("spawn polar_bear", "Spawning angry polar bears because you insulted their baby.", "bear", mcCmds, ttsVoiceClips, contains)
+  elif "ice" in response:
+    allocateToArrays("spawn polar_bear", "Spawning angry polar bears because you insulted their baby.", "ice", mcCmds, ttsVoiceClips, contains)
 
   # Iron Golem
   if "iron" in response:
@@ -95,6 +97,8 @@ def getResponse(response:str):
   # Witch
   if "witch" in response:
     allocateToArrays("spawn witch", "Spawning witches to cackle at you.", "witch", mcCmds, ttsVoiceClips, contains)
+  elif "pot" in response:  # Shorthand for potion
+    allocateToArrays("spawn witch", "Spawning witches to cackle at you.", "pot", mcCmds, ttsVoiceClips, contains)
 
   # Silverfish
   if "silverfish" in response:
@@ -153,6 +157,8 @@ def getResponse(response:str):
   # Piglin
   if "pig" in response:
     allocateToArrays("spawn piglin", "Spawning angry Piglins to steal your gold.", "pig", mcCmds, ttsVoiceClips, contains)
+  elif "gold" in response:  # Piglins like gold
+    allocateToArrays("spawn piglin", "Spawning angry Piglins to steal your gold.", "gold", mcCmds, ttsVoiceClips, contains)
 
   # Piglin Brute
   if "brute" in response:
@@ -220,9 +226,7 @@ def getResponse(response:str):
       print(word, end=")\n")
     else:
       print(word, end=", ")
-  for cmd in ttsVoiceClips:
-    playTTS(cmd)
-  return mcCmds
+  return mcCmds, ttsVoiceClips
 
 
 while True:
@@ -231,9 +235,12 @@ while True:
       r.adjust_for_ambient_noise(src)
       audio = r.listen(src)
       resp = r.recognize_google(audio)
-      cmd = getResponse(resp)
+      cmd, tts = getResponse(resp)
 
-      mcInstance.stream(cmd)  # Send to Minecraft
+      print("Commands:", cmd)
+      for i in range(len(cmd)):
+        mcInstance.stream(cmd[i])
+        playTTS(tts[i])
 
   except sr.UnknownValueError:
     pass
