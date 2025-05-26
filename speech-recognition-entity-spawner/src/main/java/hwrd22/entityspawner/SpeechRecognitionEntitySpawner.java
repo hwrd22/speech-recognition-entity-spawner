@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Random;
 
 public class SpeechRecognitionEntitySpawner implements ModInitializer {
 	public static final String MOD_ID = "speech-recognition-entity-spawner";
@@ -77,7 +78,9 @@ public class SpeechRecognitionEntitySpawner implements ModInitializer {
 	}
 
 	private void executeCommand(ServerPlayerEntity player, String entityToSpawn) {
-		int numberToSpawn = (entityToSpawn.equals("warden") || entityToSpawn.equals("ravager") || entityToSpawn.equals("ender_dragon") || entityToSpawn.equals("piglin_brute") || entityToSpawn.equals("wither") || entityToSpawn.equals("iron_golem") || entityToSpawn.equals("tnt")) ? 1 : 5;
+		Random rand = new Random();
+		int randomMultipleCount = rand.nextInt(5, 8);  // For spawns involving more than one entity, use a random number between 5 and 8.
+		int numberToSpawn = (entityToSpawn.equals("warden") || entityToSpawn.equals("ravager") || entityToSpawn.equals("ender_dragon") || entityToSpawn.equals("piglin_brute") || entityToSpawn.equals("wither") || entityToSpawn.equals("iron_golem") || entityToSpawn.equals("tnt")) ? 1 : randomMultipleCount;
 			for (int i = 0; i < numberToSpawn; i++) {
 				summonEntity(player, entityToSpawn);
 			}
