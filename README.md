@@ -6,11 +6,19 @@ The Fabric mod will take commands from the Voice Recognition program and will ca
 ## Requirements:
 - Minecraft: Java Edition 1.21.5
   - Fabric Modloader for Minecraft 1.21.5, as well as the Fabric API mod
+### If using the `.py` Files
 - Python 3.12
+- pip
+- The following Python libraries (If not already installed):
+  - speech_recognition
+  - gtts
+  - playsound
+### If using the `.exe` File:
+- Nothing more. However, `.exe` will only work on Windows.
 
 ## Usage
 - Take the `.jar` file in Releases and place it into your mods directory (`C:/%appdata%/.minecraft/mods` by default on Windows)
-- Take both `.py` files and place them into their own directory, preferably where it is easy to access.
+- Take both `.py` files (or the `.exe` file) and place them into their own directory, preferably where it is easy to access.
 - Launch Minecraft: Java Edition 1.21.5 with the Fabric modloader and the mod installed first. The Voice Recognition program requires that Minecraft is running with the mod.
   - If you are unaware of how to mod Minecraft, refer to YouTube guides.
-- Once Minecraft is finished launching, run `speech-recog.py` using Python, preferably with a microphone plugged in.
+- Once Minecraft is finished launching, run `speech-recog.py` using Python (or `speech-recog.exe` if you downloaded the `.exe`. Python is not needed for this method), preferably with a microphone plugged in.
