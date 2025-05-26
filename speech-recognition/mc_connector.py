@@ -1,6 +1,4 @@
 import socket
-import json
-import os
 
 
 class MCConnector:
@@ -16,13 +14,12 @@ class MCConnector:
       print("Could not connect to Minecraft. Please make sure Minecraft is running (with the mod) first.")
       exit(1)
   
-  def stream(self, cmdList):
-    for cmd in cmdList:
-      try:
-        self.clientSocket.send((cmd + '\r\n').encode('utf-8'))
-      except ConnectionResetError:
-        print("Minecraft instance is no longer running. Please restart Minecraft to use this script.")
-        exit(0)
-      except Exception as e:
-        print(cmd)
-        raise e
+  def stream(self, cmd):
+    try:
+      self.clientSocket.send((cmd + '\r\n').encode('utf-8'))
+    except ConnectionResetError:
+      print("Minecraft instance is no longer running. Please restart Minecraft to use this script.")
+      exit(0)
+    except Exception as e:
+      print(cmd)
+      raise e

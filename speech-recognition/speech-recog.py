@@ -210,7 +210,7 @@ def getResponse(response:str):
 
   # Ender Dragon  
   if "dragon" in response:
-    allocateToArrays("spawn dragon", "Spawning an Ender Dragon, good luck speedrunning that.", "dragon", mcCmds, ttsVoiceClips, contains)
+    allocateToArrays("spawn ender_dragon", "Spawning an Ender Dragon, good luck speedrunning that.", "dragon", mcCmds, ttsVoiceClips, contains)
 
   # Wither
   if "wither" in response:
@@ -237,7 +237,6 @@ while True:
       resp = r.recognize_google(audio)
       cmd, tts = getResponse(resp)
 
-      print("Commands:", cmd)
       for i in range(len(cmd)):
         mcInstance.stream(cmd[i])
         playTTS(tts[i])
