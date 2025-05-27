@@ -1,0 +1,122 @@
+{
+  "bee": {
+    "keywords": ["bee", "honey"],
+    "tts_response": "Spawning angry bees, buzz buzz buzz."
+  },
+  "iron_golem": {
+    "keywords": ["iron", "town", "village"],
+    "tts_response": "Spawning an angry Iron Golem to yeet you in the air."
+  },
+  "polar_bear": {
+    "keywords": ["bear", "ice"],
+    "tts_response": "Spawning angry polar bears because you got too close to their baby."
+  },
+  "wolf": {
+    "keywords": ["dog", "wolf"],
+    "tts_response": "Spawning angry wolves to steal your bones."
+  },
+  "blaze": {
+    "keywords": ["blaze", "fire"],
+    "tts_response": "Spawning Blazes to set you on fire."
+  },
+  "breeze": {
+    "keywords": ["breeze", "wind"],
+    "tts_response": "Spawning Breezes to blow you away."
+  },
+  "creeper": {
+    "keywords": ["cat", "creeper", "hiss"],
+    "tts_response": "Spawning Creepers to blow up your house."
+  },
+  "enderman": {
+    "keywords": ["carry", "end"],
+    "tts_response": "Spawning angry Endermen to steal your blocks."
+  },
+  "endermite": {
+    "keywords": ["mite", "pearl"],
+    "tts_response": "Spawning Endermites because you forgot they existed."
+  },
+  "ghast": {
+    "keywords": ["ghast", "ghost", "soul"],
+    "tts_response": "Spawning Ghasts to wail at you."
+  },
+  "guardian": {
+    "keywords": ["guard", "ocean", "sea"],
+    "tts_response": "Spawning Guardians to go pew pew at you."
+  },
+  "hoglin": {
+    "keywords": ["hog", "warp"],
+    "tts_response": "Spawning Hoglins to headbutt you."
+  },
+  "magma_cube": {
+    "keywords": ["magma", "lava"],
+    "tts_response": "Spawning Magma Cubes to bounce with fire."
+  },
+  "phantom": {
+    "keywords": ["bed", "phantom", "bed"],
+    "tts_response": "Spawning phantoms because you need some sleep."
+  },
+  "piglin": {
+    "keywords": ["gold", "pig"],
+    "tts_response": "Spawning angry Piglins to steal your gold."
+  },
+  "piglin_brute": {
+    "keywords": ["axe", "brute", "treasure"],
+    "tts_response": "Spawning a Piglin Brute to steal your gold with gold."
+  },
+  "pillager": {
+    "keywords": ["illage", "totem"],
+    "tts_response": "Spawning Pillagers to steal your emeralds."
+  },
+  "ravager": {
+    "keywords": ["raid", "ravager"],
+    "tts_response": "Spawning a Ravager to terrorize the village."
+  },
+  "shulker": {
+    "keywords": ["barrel", "box", "chest", "shulker"],
+    "tts_response": "Spawning Shulkers to lift you up into the air."
+  },
+  "silverfish": {
+    "keywords": ["fish", "hold", "silver", "stone", "strong"],
+    "tts_response": "Spawning silverfish to eat your stones."
+  },
+  "skeleton": {
+    "keywords": ["bone", "bow", "skeleton"],
+    "tts_response": "Spawning skeletons, welcome to the bone zone."
+  },
+  "slime": {
+    "keywords": ["block", "cube", "slime"],
+    "tts_response": "Spawning slimes to bounce on your head."
+  },
+  "spider": {
+    "keywords": ["bug", "spider"],
+    "tts_response": "Spawning spiders to climb your walls."
+  },
+  "witch": {
+    "keywords": ["brew", "hut", "pot", "witch"],
+    "tts_response": "Spawning witches to cackle at you."
+  },
+  "wither_skeleton": {
+    "keywords": ["coal", "skull"],
+    "tts_response": "Spawning Wither Skeletons to not drop Wither Skulls."
+  },
+  "zombie": {
+    "keywords": ["brain", "dead", "die", "rot", "zombie"],
+    "tts_response": "Spawning zombies to eat your brains."
+  },
+  "ender_dragon": {
+    "keywords": ["dragon", "egg"],
+    "tts_response": "Spawning an Ender Dragon, good luck speedrunning that."
+  },
+  "warden": {
+    "keywords": ["ancient", "city", "dark", "deep", "warden"],
+    "tts_response": "Spawning a Warden because you were too noisy."
+  },
+  "wither": {
+    "keywords": ["three", "nether", "star", "wither"],
+    "tts_response": "Spawning a Wither to shoot skulls at you."
+  },
+  "tnt": {
+    "keywords": ["boom", "tnt"],
+    "tts_response": "Spawning TNT, kaboom."
+  }
+}
