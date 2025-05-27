@@ -22,3 +22,41 @@ The Fabric mod will take commands from the Voice Recognition program and will ca
 - Launch Minecraft: Java Edition 1.21.5 with the Fabric modloader and the mod installed first. The Voice Recognition program requires that Minecraft is running with the mod.
   - If you are unaware of how to mod Minecraft, refer to YouTube guides.
 - Once Minecraft is finished launching, run `speech-recog.py` using Python (or `speech-recog.exe` if you downloaded the `.exe`. Python is not needed for this method), preferably with a microphone plugged in.
+
+## List of Mobs and Their Keywords
+<table>
+  <tr>
+    <th>Mob/Entity</th>
+    <th>Key words</th>
+  </tr>
+  <tr><td>Bee</td><td><code>'bee'</code></td></tr>
+  <tr><td>Iron Golem</td><td><code>'iron'</code></td></tr>
+  <tr><td>Polar Bear</td><td><code>'bear'</code>, <code>'ice'</code></td></tr>
+  <tr><td>Wolf</td><td><code>'dog'</code>, <code>'wolf'</code></td></tr>
+  <tr><td>Blaze</td><td><code>'blaze'</code>, <code>'fire'</code></td></tr>
+  <tr><td>Breeze</td><td><code>'breeze'</code>, <code>'wind'</code></td></tr>
+  <tr><td>Creeper</td><td><code>'creeper'</code>, <code>'cat'</code></td></tr>
+  <tr><td>Enderman</td><td><code>'end'</code></td></tr>
+  <tr><td>Endermite</td><td><code>'mite'</code>, <code>'pearl'</code></td></tr>
+  <tr><td>Ghast</td><td><code>'ghast'</code> (Hard for program to recognize), <code>'ghost'</code>, <code>'soul'</code></td></tr>
+  <tr><td>Guardian</td><td><code>'guard'</code>, <code>'ocean'</code>, <code>'sea'</code></td></tr>
+  <tr><td>Hoglin</td><td><code>'hog'</code></td></tr>
+  <tr><td>Magma Cube</td><td><code>'magma'</code>, <code>'lava'</code></td></tr>
+  <tr><td>Phantom</td><td><code>'phantom'</code>, <code>'sleep'</code>, <code>'bed'</code></td></tr>
+  <tr><td>Piglin</td><td><code>'pig'</code>, <code>'gold'</code></td></tr>
+  <tr><td>Piglin Brute</td><td><code>'brute'</code> (Hard for program to recognize)</td></tr>
+  <tr><td>Pillager</td><td><code>'illager'</code>, <code>'raid'</code></td></tr>
+  <tr><td>Ravager</td><td><code>'ravager'</code> (Hard for program to recognize)</td></tr>
+  <tr><td>Shulker</td><td><code>'shulker'</code> (Hard for program to recognize), <code>'chest'</code>, <code>'box'</code>, <code>'barrel'</code></td></tr>
+  <tr><td>Silverfish</td><td><code>'silver'</code>, <code>'fish'</code></td></tr>
+  <tr><td>Skeleton</td><td><code>'skeleton'</code>, <code>'bone'</code></td></tr>
+  <tr><td>Slime</td><td><code>'slime'</code></td></tr>
+  <tr><td>Spider</td><td><code>'spider'</code>, <code>'bug'</code></td></tr>
+  <tr><td>Witch</td><td><code>'witch'</code>, <code>'pot'</code> (Short for potion)</td></tr>
+  <tr><td>Wither Skeleton</td><td><code>'skull'</code></td></tr>
+  <tr><td>Zombie</td><td><code>'zombie'</code>, <code>'rot'</code></td></tr>
+  <tr><td>Ender Dragon</td><td><code>'dragon'</code></td></tr>
+  <tr><td>Warden</td><td><code>'dark'</code>, <code>'warden'</code></td></tr>
+  <tr><td>Wither</td><td><code>'wither'</code> (Hard for program to recognize)</td></tr>
+  <tr><td>TNT</td><td><code>'tnt'</code></td></tr>
+</table>
