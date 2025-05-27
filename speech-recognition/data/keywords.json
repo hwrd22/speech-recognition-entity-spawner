@@ -64,7 +64,7 @@
     "tts_response": "Spawning a Piglin Brute to steal your gold with gold."
   },
   "pillager": {
-    "keywords": ["illage", "totem"],
+    "keywords": ["illager", "totem"],
     "tts_response": "Spawning Pillagers to steal your emeralds."
   },
   "ravager": {
