@@ -23,9 +23,9 @@ logFile = open("latest.log", "w")
 logFile.close()
 
 # Function for both printing and adding to log.
-def writeToLog(stringToLog:str, end:str='\n', endLine:bool=True, type:str='INFO'):
+def writeToLog(stringToLog:str, end:str='\n', endLine:bool=True, log_type:str='INFO'):
   logFile = open("latest.log", "a+")  # Open file
-  logFile.write(f'[{type}] ' + stringToLog + end.rstrip('\n') + ('\n' if endLine else ''))
+  logFile.write(f'[{log_type}] ' + stringToLog + end.rstrip('\n') + ('\n' if endLine else ''))
   print(stringToLog, end=end)
   logFile.close()
 
