@@ -18,16 +18,22 @@ r.energy_threshold = 300
 
 # Log file for users to read on any errors
 # ==================================================================================
-# Reset the log
-logFile = open("latest.log", "w")
-logFile.close()
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename="latest.log",
+    filemode="w",
+    format="[{levelname}] {message}",
+    style="{",
+    level=logging.INFO
+)
 
 # Function for both printing and adding to log.
 def writeToLog(stringToLog:str, end:str='\n', endLine:bool=True, log_type:str='INFO'):
-  logFile = open("latest.log", "a+")  # Open file
-  logFile.write(f'[{log_type}] ' + stringToLog + end.rstrip('\n') + ('\n' if endLine else ''))
-  print(stringToLog, end=end)
-  logFile.close()
+    log_level = getattr(logging, log_type.upper(), logging.INFO)
+    logging.log(log_level, stringToLog)
+    print(stringToLog, end=end)
 
 # Map for mob strings and their keywords
 mobMap = None
