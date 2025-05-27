@@ -35,11 +35,11 @@ try:
   with open("./data/keywords.json", 'r') as file:
     mobMap = json.load(file)
 except:
-  writeToLog("An error occurred while attempting to load keywords.json. Make sure the proper keywords.json file exists in the data folder!", type='ERR')
+  writeToLog("An error occurred while attempting to load keywords.json. Make sure the proper keywords.json file exists in the data folder!", log_type='ERR')
   exit(1)
 
 if not mobMap:
-  writeToLog("No data was found in keywords.json. Please ensure the file has data and try again.", type='ERR')
+  writeToLog("No data was found in keywords.json. Please ensure the file has data and try again.", log_type='ERR')
   exit(1)
 
 micNdx = None
