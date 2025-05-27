@@ -5,6 +5,7 @@ from gtts import gTTS
 import os
 import playsound
 import json
+import sys
 from mc_connector import MCConnector
 
 # Microphone selector
