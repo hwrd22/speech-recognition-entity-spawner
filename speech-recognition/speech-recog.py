@@ -30,8 +30,8 @@ logging.basicConfig(
 )
 
 # Function for both printing and adding to log.
-def writeToLog(stringToLog:str, end:str='\n', endLine:bool=True, log_type:str='INFO'):
-    log_level = getattr(logging, log_type.upper(), logging.INFO)
+def writeToLog(stringToLog:str, end:str='\n', logType:str='INFO'):
+    log_level = getattr(logging, logType.upper(), logging.INFO)
     logging.log(log_level, stringToLog)
     print(stringToLog, end=end)
 
@@ -41,11 +41,11 @@ try:
   with open("./data/keywords.json", 'r') as file:
     mobMap = json.load(file)
 except:
-  writeToLog("An error occurred while attempting to load keywords.json. Make sure the proper keywords.json file exists in the data folder!", log_type='ERR')
+  writeToLog("An error occurred while attempting to load keywords.json. Make sure the proper keywords.json file exists in the data folder!", logType='ERR')
   exit(1)
 
 if not mobMap:
-  writeToLog("No data was found in keywords.json. Please ensure the file has data and try again.", log_type='ERR')
+  writeToLog("No data was found in keywords.json. Please ensure the file has data and try again.", logType='ERR')
   exit(1)
 
 micNdx = None
