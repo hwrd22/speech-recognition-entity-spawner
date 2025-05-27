@@ -54,17 +54,12 @@ mcInstance = MCConnector(7777)  # Attempting to connect to Minecraft with the mo
 writeToLog("Beginning speech recognition!")
 
 def processResponse(response:str, cmdArray:List[str], ttsArray:List[str], containingArray:List[str]):
-  allKeyWords = []
-  mobs = tuple(mobMap.keys())
-  for key in mobMap:
-    allKeyWords.append(mobMap[key]['keywords'])
-  # TODO: Code this more efficiently
-  for i in range(len(allKeyWords)):
-    for keyword in allKeyWords[i]:
+  # Iterate directly over mobMap items for efficiency and readability
+  for mobToSpawn, mobData in mobMap.items():
+    for keyword in mobData['keywords']:
       if keyword in response:
-        mobToSpawn = mobs[i]
         cmdArray.append('spawn ' + mobToSpawn)
-        ttsArray.append(mobMap[mobToSpawn]['tts_response'])
+        ttsArray.append(mobData['tts_response'])
         containingArray.append(keyword)
         break
 
