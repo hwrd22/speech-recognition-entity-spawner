@@ -42,14 +42,14 @@ try:
     mobMap = json.load(file)
 except FileNotFoundError:
   writeToLog("The file keywords.json was not found. Make sure the proper keywords.json file exists in the data folder!", logType='ERROR')
-  exit(1)
+  sys.exit(1)
 except json.JSONDecodeError:
   writeToLog("Failed to decode keywords.json. Ensure the file contains valid JSON data!", logType='ERROR')
-  exit(1)
+  sys.exit(1)
 
 if not mobMap:
   writeToLog("No data was found in keywords.json. Please ensure the file has data and try again.", logType='ERROR')
-  exit(1)
+  sys.exit(1)
 
 micNdx = None
 if args.Microphone:
