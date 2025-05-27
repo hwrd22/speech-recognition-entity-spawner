@@ -74,7 +74,7 @@ def playTTS(textToPlay:str):
 
 def getResponse(response:str):
   res = response
-  response = str(resp).replace(" ", "").lower()  # Reduces multiple words to one mish-mashed word -> strings like "village raid" contains "illager" if spaces are removed.
+  response = str(res).replace(" ", "").lower()  # Reduces multiple words to one mish-mashed word -> strings like "village raid" contains "illager" if spaces are removed.
   response = str(response).replace("'", "")  # Removes any apostrophes from string
 
   mcCmds = []  # Commands to send to Minecraft

@@ -52,7 +52,7 @@
     "tts_response": "Spawning Magma Cubes to bounce with fire."
   },
   "phantom": {
-    "keywords": ["bed", "phantom", "bed"],
+    "keywords": ["bed", "phantom", "sleep"],
     "tts_response": "Spawning phantoms because you need some sleep."
   },
   "piglin": {
